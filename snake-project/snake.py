@@ -35,6 +35,14 @@ class Snake:
             self.new_y = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(self.new_x, self.new_y)
         self.head.forward(20)
+
+    
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1500, 1500)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
     
     def up(self):
         if self.head.heading() != DOWN:
