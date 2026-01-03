@@ -41,7 +41,7 @@ while game_on:
                 if answer_state not in named_states:
                     x = (state_names[state_names.state == f"{state}"]).x
                     y = (state_names[state_names.state == f"{state}"]).y
-                    new_state = State(name=answer_state, x=int(x.values[0]), y=int(y.values[0]))
+                    new_state = State(name=answer_state, x=int(x.iloc[0]), y=int(y.iloc[0]))
                     named_states.append(answer_state)
                     scoreboard.update()
                     if scoreboard.score >= 50:
