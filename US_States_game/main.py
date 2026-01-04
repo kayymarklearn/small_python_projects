@@ -26,13 +26,7 @@ while game_on:
     answer_state = screen.textinput(title=f"{scoreboard.score}/50 States Correct", prompt="What's another state name?").title()
     if answer_state == "Exit":
          # States to learn
-        missed_states = []
-
-        for state in state_list:
-            if state not in named_states:
-                missed_states.append(state)
-
-
+        missed_states = [state for state in state_list if state not in named_states]
         missed_states_data = pandas.DataFrame(missed_states)
         missed_states_data.to_csv("states_to_learn.csv")
         break
