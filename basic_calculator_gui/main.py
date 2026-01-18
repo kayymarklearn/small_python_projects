@@ -1,7 +1,8 @@
 from tkinter import *
-from calculate import *
-digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-operators = ['x', '+', '-', '/', '=']
+from calculate import Calculator
+
+digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+operators = ["x", "+", "-", "/", "="]
 digit_buttons = []
 
 window = Tk()
@@ -9,11 +10,15 @@ window.title("Basic Calculator")
 window.minsize(400, 300)
 window.config(padx=20, pady=20)
 
+calc = Calculator()
+
+
 def get_user_input():
     pass
 
+
 def display_user_input(dig):
-    user_input.insert('end-1c', dig)
+    user_input.insert("end-1c", dig)
 
 
 # User Input
