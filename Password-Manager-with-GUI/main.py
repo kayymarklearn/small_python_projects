@@ -1,6 +1,7 @@
 from tkinter import *
 from random import choice, randint, shuffle
 from tkinter import messagebox
+import json
 import pyperclip
 
 FONT = ("Liberation Mono", 16, "bold")
@@ -30,20 +31,57 @@ def write_data():
     website = web_site_input.get()
     email = email_input.get()
     password = password_input.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
    
-    if len(website) == 0 or len(password) == 0 or len(email) == 0:
+    if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Empty Field", message="Please don't leave any fields empty!")
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} "
-            f"\nPassword: {password} \n Is it OK to save?")
-
-        if is_ok:
-            with open("data.txt", mode="a") as file:
-                file.write(f"{website} | {email} | {password}\n")
-
+        try:
+            with open("data.json", "r") as file:
+                # Reading old data
+                data = json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            # The file doesn't exist or is empty/corrupted
+            with open("data.json", 'w') as file:
+                json.dump(new_data, file, indent=4)
+        else:
+            # Updating old data with new data
+            data.update(new_data)
+            with open("data.json", 'w') as file:
+                # Saving updated data
+                json.dump(data, file, indent=4)
+        finally:
             web_site_input.delete(0, END)
             web_site_input.focus()
             password_input.delete(0, END)
+
+
+# Find password
+def search_password():
+    site = web_site_input.get()
+    if len(site) == 0:
+        messagebox.showinfo(title="Empty Field", message="Please enter an email address.")
+    else:
+        try:
+            with open("data.json", 'r') as file:
+                data = json.load(file)
+                if site in data:
+                    messagebox.showinfo(title=f"{site}", message=f"Email: {data[site]["email"]}\nPassword: {data[site]["password"]}")
+                else:
+                    messagebox.showinfo(title=f"{site}", message=f"No info on {site} has been saved.")
+        except(FileNotFoundError, json.JSONDecodeError):
+            messagebox.showerror(title="No Data", message="You do not have any passwords saved.")
+        finally:
+            web_site_input.delete(0, END)
+            web_site_input.focus()
+
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Local Password Manager")
@@ -57,14 +95,18 @@ canvas.grid(row=0, column=1)
 # Website input field
 web_site = Label(text="website: ", font=FONT)
 web_site.grid(row=1, column=0)
-web_site_input = Entry(width=35)
+web_site_input = Entry(width=21)
 web_site_input.focus()
-web_site_input.grid(row=1, column=1, columnspan=2)
+web_site_input.grid(row=1, column=1)
+
+# Search Button
+search_btn = Button(text="Search", font=FONT, command=search_password, width=16)
+search_btn.grid(row=1, column=2)
 
 # Email/Username input field
 email = Label(text="Email/Username: ", font=FONT)
 email.grid(row=2, column=0)
-email_input = Entry(width=35)
+email_input = Entry(width=43)
 email_input.insert(END, "mark@gmail.com")
 email_input.grid(row=2, column=1, columnspan=2)
 
@@ -73,7 +115,7 @@ password = Label(text="Password: ", font=FONT)
 password.grid(row=3, column=0)
 password_input = Entry(width=21)
 password_input.grid(row=3, column=1)
-generate_password_btn = Button(text="Generate Password", font=FONT, command=generate_password)
+generate_password_btn = Button(text="Generate Password", font=FONT, command=generate_password, width=16)
 generate_password_btn.grid(row=3, column=2)
 
 # Add password info to the Manager
