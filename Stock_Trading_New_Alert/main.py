@@ -1,6 +1,6 @@
 import requests
 from newsapi import (
-    NewsApiClient,
+    NewsApiClient, # type: ignore
 )
 from twilio.rest import Client
 import os
@@ -34,13 +34,13 @@ vantage_response_data = vantage_response.json()["Time Series (Daily)"]
 yesterday_close = list(vantage_response_data.values())[:1][0]["4. close"]
 day_before_close = list(vantage_response_data.values())[1:2][0]["4. close"]
 price_change = float(yesterday_close) - float(day_before_close)
-percentage_change = round(((price_change) / float(day_before_close)) * 100)
+percentage_change = ((price_change) / float(yesterday_close)) * 100
 if percentage_change < 0:
-    percentage_change_str = f"🔻{abs(percentage_change)}%"
+    percentage_change_str = f"🔻{abs(round(percentage_change))}%"
 else:
-    percentage_change_str = f"🔺{abs(percentage_change)}%"
+    percentage_change_str = f"🔺{abs(round(percentage_change))}%"
 
-if (abs(percentage_change)) == 5:
+if (abs(percentage_change)) >= 5:
     ## STEP 2: Use https://newsapi.org
     # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
 
@@ -57,9 +57,9 @@ if (abs(percentage_change)) == 5:
         news.append(message)  # type: ignore
 
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
-    for article in news:
+    for article in news: # type: ignore
         message = client.messages.create(
-            messaging_service_sid=MESSAGING_SERVICE_SID, body=article, to=MY_NUMBER
+            messaging_service_sid=MESSAGING_SERVICE_SID, body=article, to=MY_NUMBER # type: ignore
         )
 
 
