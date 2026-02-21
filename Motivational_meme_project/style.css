@@ -1,0 +1,21 @@
+:root {
+    color: azure;
+    background-color: black;
+}
+
+.main {
+    text-align: center;
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 25%;   
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.main img {
+    border: 5px solid white;
+    width: 90%;   
+}
+
+.main h1 {
+    text-transform: uppercase;
+}
