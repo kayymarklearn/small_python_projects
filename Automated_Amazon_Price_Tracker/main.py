@@ -8,7 +8,7 @@ load_dotenv()
 URL = "https://appbrewery.github.io/instant_pot/"
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
-    "Accept-Language": "en-US,en;q=0.9"
+    "Accept-Language": "en-US,en;q=0.9",
 }
 SMTP_ADDRESS = os.getenv("SMTP_ADDRESS")
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
@@ -32,10 +32,10 @@ product_title = " ".join(product_title.split())
 
 subject = "Amazon Price Alert!"
 body = f"{product_title} is now ${whole_price}"
-message = f"Subject: {subject}\n\n{body}".encode('utf-8')
+message = f"Subject: {subject}\n\n{body}".encode("utf-8")
 
 if whole_price < price_target:
-    with SMTP(host=SMTP_ADDRESS, port=587) as  server:
+    with SMTP(host=SMTP_ADDRESS, port=587) as server:
 
         server.starttls()
         server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
