@@ -1,0 +1,10 @@
+body {
+  background-color: #63352a;
+  color: white;
+}
+
+h2, h1, h3 {
+  text-transform: title;
+  text-align: center;
+  margin-top: 10%;
+}
