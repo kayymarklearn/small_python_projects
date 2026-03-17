@@ -6,6 +6,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
+
+    
 @app.route("/guess/<name>")
 def guess(name):
     GENDERIZE_URL = "https://api.genderize.io/"
