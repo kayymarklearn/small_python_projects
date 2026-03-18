@@ -1,9 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import requests
+import smtplib
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access teh variables
+SMTP_SERVER = os.getenv("SMTP_SERVER")
+SMTP_PORT = os.getenv("SMTP_PORT")
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
 
 post_data = requests.get(url="https://api.npoint.io/dd1a11db7041bf5213ea")
 posts = post_data.json()
-
+data = {}
 
 app = Flask(__name__)
 
@@ -18,9 +30,25 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["POST", "GET"])
 def contact():
-    return render_template("contact.html")
+    global data
+    if request.method == "GET":
+        return render_template("contact.html", form=request.method)
+    else:
+        data = request.form
+
+        # Sending Email with smtplib
+        subject = f"Message from reader, {data['name']}."
+        body = f"Name: {data['name']}\nEmail: {data['email']}\nPhone: {data['phone']}\nMessage: {data['message']}"
+        message = f"Subject: {subject}\n\n{body}"
+
+        connection = smtplib.SMTP(SMTP_SERVER, int(SMTP_PORT))  # type: ignore
+        connection.ehlo()
+        connection.starttls()
+        connection.login(user=USERNAME, password=PASSWORD)  # type: ignore
+        connection.sendmail(from_addr=USERNAME, to_addrs=USERNAME, msg=message)  # type: ignore
+        return render_template("contact.html", form_method=request.method)
 
 
 @app.route("/post/<int:id>")
