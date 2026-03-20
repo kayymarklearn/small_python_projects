@@ -2,7 +2,7 @@
  
 This repository is a growing collection of **small Python projects** built for learning, experimenting, and having fun 
 
-Each project lives in its **own directory** and focuses on different Python concepts—ranging from simple logic and graphics to classic arcade-style games 🕹️
+Each project lives in its **own directory** and focuses on different Python concepts—ranging from simple logic and graphics to classic arcade-style games 
 
 ##  Projects Included
 -  **Etch-A-Sketch**
