@@ -50,3 +50,7 @@ python main.py
 - Case-insensitive input
 - Fun way to learn random number generation
 
+## License
+
+This is a personal project for educational purposes.
+

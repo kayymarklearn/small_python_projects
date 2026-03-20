@@ -45,3 +45,7 @@ The default palette includes 15 earth-tone and rich colors that can be customize
 - Uses fastest speed for quick rendering
 - Click to exit the window
 
+## License
+
+This is a personal project for educational purposes.
+

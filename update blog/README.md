@@ -56,3 +56,7 @@ Visit `http://127.0.0.1:5000` in your browser.
 - Posts are fetched from an external API at runtime
 - Contact form submissions are sent via SMTP to the configured email address
 - Update the `.env` file with your own SMTP credentials before using the contact form
+
+## License
+
+This is a personal project for educational purposes.

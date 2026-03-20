@@ -59,3 +59,7 @@ python main.py
 - Ball size auto-scales
 - Screen is 800x600 pixels
 
+## License
+
+This is a personal project for educational purposes.
+

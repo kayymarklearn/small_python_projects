@@ -76,3 +76,7 @@ When you exit, `states_to_learn.csv` is created with states you missed for futur
 - Game doesn't end until you reach 50 or exit
 - Repeat to improve your score
 
+## License
+
+This is a personal project for educational purposes.
+

@@ -52,3 +52,7 @@ Modify these constants in main.py:
 - Checkmarks indicate completed sessions
 - Easy to reset and start over
 
+## License
+
+This is a personal project for educational purposes.
+

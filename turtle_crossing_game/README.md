@@ -59,3 +59,7 @@ python main.py
 - Car speed increases by 10 units per level
 - Smooth scrolling animation
 
+## License
+
+This is a personal project for educational purposes.
+

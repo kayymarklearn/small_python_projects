@@ -46,3 +46,7 @@ The application uses HTTP requests to interact with Pixela's REST API:
 - Uncomment sections to execute specific operations
 - Your token must be kept secure
 
+## License
+
+This is a personal project for educational purposes.
+

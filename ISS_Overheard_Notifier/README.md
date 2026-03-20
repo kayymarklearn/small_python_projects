@@ -49,3 +49,7 @@ Some example coordinates:
 - Add `time.sleep(60)` and loop to check every 60 seconds
 - The "Look Up 👆" emoji makes it easy to spot in inbox
 
+## License
+
+This is a personal project for educational purposes.
+

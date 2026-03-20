@@ -11,3 +11,7 @@ Currently facing issues logging in due to X's bot protections. Will work on reso
 ```bash
 python main.py
 ```
+
+## License
+
+This is a personal project for educational purposes.

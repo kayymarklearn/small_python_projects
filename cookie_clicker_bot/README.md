@@ -29,3 +29,7 @@ The bot will:
 2. Automatically click the cookie
 3. Every 5 seconds, purchase the most expensive affordable upgrade
 4. Run for 5 minutes and display cookies per second
+
+## License
+
+This is a personal project for educational purposes.

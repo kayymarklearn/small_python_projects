@@ -47,3 +47,7 @@ python main.py
 - No authentication required
 - Internet connection required to fetch quotes
 
+## License
+
+This is a personal project for educational purposes.
+

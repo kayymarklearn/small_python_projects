@@ -68,3 +68,7 @@ Passwords are stored in `data.json`:
 - Use unique passwords from this manager
 - Do not commit data.json to version control
 
+## License
+
+This is a personal project for educational purposes.
+

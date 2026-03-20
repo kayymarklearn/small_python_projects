@@ -51,3 +51,7 @@ The AI will parse this and extract:
 - Get Gemini API key from [Google AI Studio](https://aistudio.google.com)
 - Set up Google Sheet integration using [Sheety](https://sheety.co)
 
+## License
+
+This is a personal project for educational purposes.
+

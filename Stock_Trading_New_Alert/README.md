@@ -72,3 +72,7 @@ Edit `if (abs(percentage_change)) >= 5:` line
 - SMS charges apply per Twilio plan
 - Use environment variables for security
 
+## License
+
+This is a personal project for educational purposes.
+

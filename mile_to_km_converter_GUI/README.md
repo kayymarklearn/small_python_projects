@@ -33,3 +33,7 @@ python main.py
 - Results are rounded to 2 decimal places
 - Input should be numeric
 
+## License
+
+This is a personal project for educational purposes.
+

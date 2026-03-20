@@ -44,3 +44,7 @@ python main.py
 4. If payment is complete, the drink is made
 5. Machine deducts resources and updates money balance
 
+## License
+
+This is a personal project for educational purposes.
+

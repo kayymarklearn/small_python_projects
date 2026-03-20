@@ -79,3 +79,7 @@ $29/mo
 Pirority Listing
 Unlimited Matches & Messages
 Unlimited App Usage
+
+## License
+
+This is a personal project for educational purposes.

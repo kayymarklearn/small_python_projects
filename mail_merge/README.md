@@ -61,3 +61,7 @@ Generated files will appear in `Output/ReadyToSend/` with names like:
 - Case is preserved from the names list
 - Original template file is not modified
 
+## License
+
+This is a personal project for educational purposes.
+

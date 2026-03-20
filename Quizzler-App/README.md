@@ -61,3 +61,7 @@ Edit data.py to change:
 - Internet connection required
 - Randomized question selection
 
+## License
+
+This is a personal project for educational purposes.
+

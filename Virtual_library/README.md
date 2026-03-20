@@ -44,3 +44,7 @@ Navigate to `http://127.0.0.1:5000` in your browser.
 
 ## How It Works
 The application uses SQLAlchemy ORM to manage a SQLite database. Each book entry contains a title, author, and rating (0-10). The Flask server handles CRUD operations through its routing system.
+
+## License
+
+This is a personal project for educational purposes.

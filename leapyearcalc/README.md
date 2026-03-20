@@ -32,3 +32,7 @@ Examples:
 - 1900: Not a leap year (divisible by 100 but not 400)
 - 2019: Not a leap year (not divisible by 4)
 
+## License
+
+This is a personal project for educational purposes.
+

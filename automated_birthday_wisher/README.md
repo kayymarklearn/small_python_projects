@@ -48,3 +48,7 @@ The script automatically checks if today is anyone's birthday and sends an email
 - Gmail SMTP server: smtp.gmail.com (port 587)
 - The script runs once; for automated daily execution, consider using a scheduler (cron, Task Scheduler, etc.)
 
+## License
+
+This is a personal project for educational purposes.
+

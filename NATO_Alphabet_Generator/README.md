@@ -56,3 +56,7 @@ Enter a word: PYTHON
 - Non-letter characters will trigger an error message
 - Input is recursively re-prompted on errors
 
+## License
+
+This is a personal project for educational purposes.
+

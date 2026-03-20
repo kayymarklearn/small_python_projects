@@ -32,3 +32,7 @@ python main.py
 ## How It Works
 The turtle moves with a 10-unit step size and rotates 10 degrees for each turn command. The screen clears by lifting the pen, moving to home position, and lowering the pen again.
 
+## License
+
+This is a personal project for educational purposes.
+

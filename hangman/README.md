@@ -45,3 +45,7 @@ python main.py
 - Visual stages progress from empty to complete hangman
 - Case-insensitive letter matching
 
+## License
+
+This is a personal project for educational purposes.
+

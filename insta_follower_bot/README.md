@@ -39,3 +39,7 @@ SIMILAR_ACCOUNT = "https://www.instagram.com/username/"
 - Uses Instagram login credentials from environment variables
 - Adds random delays to avoid detection
 - Opens Chrome in debug mode to keep browser open after execution
+
+## License
+
+This is a personal project for educational purposes.

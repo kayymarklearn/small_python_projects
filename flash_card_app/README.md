@@ -59,3 +59,7 @@ Chat,Cat
 - Words marked as known are removed from words_to_learn.csv
 - To restart, delete words_to_learn.csv and it will regenerate from french_words.csv
 
+## License
+
+This is a personal project for educational purposes.
+

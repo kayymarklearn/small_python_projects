@@ -63,3 +63,7 @@ Modify in main.py:
 - High score persists between sessions
 - Click to exit game window
 
+## License
+
+This is a personal project for educational purposes.
+

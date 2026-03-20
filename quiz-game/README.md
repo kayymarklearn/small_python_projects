@@ -47,3 +47,7 @@ question_data = [
 - Score updates after each question
 - Final statistics provided at game end
 
+## License
+
+This is a personal project for educational purposes.
+
