@@ -6,4 +6,4 @@ __pycache__/
 .Ds_store
 .env
 .db
-/Virtual_library/instance
+*/instance
