@@ -1,0 +1,40 @@
+info:
+  name: Add A New Cafe
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://127.0.0.1:5000/add
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: Espresso House
+      - name: map_url
+        value: https://maps.app.goo.gl/3h1ZrAKtK4Mu2qzx8
+      - name: location
+        value: Olav Vs gate 2, 0166 Oslo, Norway
+      - name: seats
+        value: 20 - 35
+      - name: has_toilet
+        value: "1"
+      - name: has_wifi
+        value: "1"
+      - name: has_sockets
+        value: "1"
+      - name: can_take_calls
+        value: "1"
+      - name: coffee_price
+        value: £2.5
+      - name: img_url
+        value: https://laptopfriendly.co/images/places/oslo/espresso-house/espresso-house--oslo.jpg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: Add cafe data to the database using a form.

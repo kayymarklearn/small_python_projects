@@ -1,0 +1,21 @@
+info:
+  name: Searches Cafes By Location
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://127.0.0.1:5000/search?loc=peckham
+  params:
+    - name: loc
+      value: peckham
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: Searches for cafes from the database. You will need to provide a location using the loc parameter.

@@ -1,0 +1,18 @@
+info:
+  name: Get All Cafes
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://127.0.0.1:5000/all
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |
+  Get a response containing all cafes in the database as a json object.

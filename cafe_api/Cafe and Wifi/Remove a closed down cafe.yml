@@ -1,0 +1,21 @@
+info:
+  name: Remove a closed down cafe
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: http://127.0.0.1:5000/report-closed/14?api-key=TopSecretAPIKey
+  params:
+    - name: api-key
+      value: TopSecretAPIKey
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: Removes a cafe that has been closed down from the database, you'll need the cafe's ID and an API key to delete cafes from the database else you'll not be allowed.

@@ -1,0 +1,21 @@
+info:
+  name: Update Price of Cafe
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: http://127.0.0.1:5000/update-price/20?new_price=€3.80
+  params:
+    - name: new_price
+      value: €3.80
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: Updates a the coffee price at a cafe, you'll need the ID and the new_price.
