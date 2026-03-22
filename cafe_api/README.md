@@ -21,7 +21,6 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-Visit http://localhost:5000
 
 ## Endpoints
 | Route | Method | Description |
